@@ -2,12 +2,14 @@
 
 Launching self mail hosting has always been pain in the ass. Generaly you need VPS or similar to host and pay for it. Besides you need to set up and manage all antispam services to prevent you from being spammed. 
 
-The aim of Selfymail is to make possible running self hosted mail as easy as possible.
+The aim of Selfymail is to make running self hosted mail as easy as possible.
 
 ### Architecture
 
 ![](Selfymail.drawio.png)
 
+
+Under the hood selfymail uses great [Maddy mail server](https://maddy.email/) which is written in Go and includes SMTP/POP3/IMAP in one single binary with low usage footprint.
 
 ### Requirements
 
