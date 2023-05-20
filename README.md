@@ -6,7 +6,7 @@ The aim of Selfymail is to make possible running self hosted mail as easy as pos
 
 ### Architecture
 
-![](Selfymail.drawio)
+![](Selfymail.drawio.png)
 
 
 ### Requirements
