@@ -6,19 +6,21 @@ The aim of Selfymail is to make possible running self hosted mail as easy as pos
 
 ### Architecture
 
+![](Selfymail.drawio)
+
 
 ### Requirements
 
 * domain name and access to DNS zone editing
-* docker
+* docker with docker compose module
 * (optional) AWS SES, sendgrid of something similar if you want to send email and be sure it is delivered well
 
 ### Installation
 
 * Clone this repository
-* Access telegram bot @selfmymailbot to get the token. You need to set correct MX (selfymail.lifeisfile.com) for this step
+* Access telegram bot @selfmymailbot to get the token. You need to set correct MX record during this step
 * Wait to be approved (usually it takes up to several hours, but automation is in TODO)
-* Run ./selfymail.sh and provide aquired token
+* Run ./selfymail.sh and provide aquired token to get wireguard config. Docker compose will be launched.
 
 ### Usage
 
