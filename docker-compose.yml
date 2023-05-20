@@ -1,0 +1,36 @@
+version: "3.9"
+
+services:
+  selfymail-maddy:
+    image: foxcpp/maddy:0.6.3
+    container_name: selfymail-maddy
+    restart: unless-stopped
+    environment:
+      MADDY_HOSTNAME: ${DOMAIN}
+      MADDY_DOMAIN: ${DOMAIN}
+      OUTBOUND_SMTP_LOGIN: ${OUTBOUND_SMTP_LOGIN}
+      OUTBOUND_SMTP_PASSWORD: ${OUTBOUND_SMTP_PASSWORD}
+      OUTBOUND_SMTP_HOST: ${OUTBOUND_SMTP_HOST}
+      OUTBOUND_SMTP_PORT: ${OUTBOUND_SMTP_PORT}
+    volumes:
+      - ~/.selfymail:/data
+    
+    network_mode: service:selfymail-wireguard
+    
+  selfymail-wireguard:
+    image: linuxserver/wireguard
+    container_name: selfymail-wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    restart: unless-stopped
+    volumes:
+      - ~/selfymail/wg:/config
+    ports:
+      - "26:25"
+      - "144:143"
+      - "588:587"
+      - "994:993"
+    
+    
+
