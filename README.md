@@ -11,18 +11,26 @@ The aim of Selfymail is to make possible running self hosted mail as easy as pos
 
 ### Requirements
 
-* domain name and access to DNS zone editing
-* docker with docker compose module
+* Domain name and access to DNS zone editing
+* Docker with docker compose module
+* Telegram account to access selfymailbot
 * (optional) AWS SES, sendgrid of something similar if you want to send email and be sure it is delivered well
 
 ### Installation
 
 * Clone this repository
-* Access telegram bot @selfmymailbot to get the token. You need to set correct MX record during this step
+* Access telegram bot @selfymailbot to get the token. You need to set correct MX record during this step
 * Wait to be approved (usually it takes up to several hours, but automation is in TODO)
-* Run ./selfymail.sh and provide aquired token to get wireguard config. Docker compose will be launched.
+* Run `./selfymail.sh` and provide aquired token to get wireguard config. Docker compose will be launched.
 
 ### Usage
 
-Create email boxes
-Since currently selfymail comes without webmail (but it is in TODO) you have to set up email client to use you new mailserver
+##### Create email boxes
+
+run `./addmbox.sh some@mailbox.com`
+
+##### Setup email client
+Since currently selfymail comes without webmail (but it is in TODO) you have to set up email client to use you new mailserver.
+Use localhost:993 for imap and localhost:587 for email smtp port. If client is remote you have to define valid IP address.
+
+If you use wireguard (default), then your mail server has IP  192.168.X.2 and you can use it in remote email clients in the same wireguard network.

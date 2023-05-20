@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 DATA_DIR=~/.selfymail
 if [ ! -e $DATA_DIR ]; then
@@ -8,7 +8,7 @@ if [ ! -e $DATA_DIR ]; then
 fi
 if [ ! -e $DATA_DIR/tls/privkey.pem ]; then
     openssl genrsa -out $DATA_DIR/tls/privkey.pem 2048
-    openssl req -new -x509 -key $DATA_DIR/tls/privkey.pem -out $DATA_DIR/tls/fullchain.pem -days 3650
+    openssl req -new -x509 -key $DATA_DIR/tls/privkey.pem -out $DATA_DIR/tls/fullchain.pem -days 3650 -subj "/C=US/ST=California/L=San Francisco/O=My Org/CN=mydomain.com"
 fi
 
 docker-compose up -d
