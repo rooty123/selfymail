@@ -15,15 +15,16 @@ Under the hood selfymail uses great [Maddy mail server](https://maddy.email/) wh
 
 * Domain name and access to DNS zone editing
 * Docker with docker compose module
-* Telegram account to access selfymailbot
+* Telegram account to access [@selfymailbot](https://t.me/selfymailbot)
 * (optional) AWS SES, sendgrid of something similar if you want to send email and be sure it is delivered well
 
 ### Installation
 
 * Clone this repository
-* Access telegram bot @selfymailbot to get the token. You need to set correct MX record during this step
+* Access telegram bot [@selfymailbot](https://t.me/selfymailbot) to get the WG config. You need to set correct MX record during this step
 * Wait to be approved (usually it takes up to several hours, but automation is in TODO)
-* Run `./selfymail.sh` and provide aquired token to get wireguard config. Docker compose will be launched.
+* Save `wg0.conf` to `wg/wg0.conf`
+* Run `./selfymail.sh` and and answer a few questions. Docker compose will be launched.
 
 ### Usage
 
@@ -39,3 +40,5 @@ If you use wireguard (default), then your mail server has IP  192.168.X.2 and yo
 
 
 [!["Buy Me A Coffee"](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/rooty)
+
+Made with love and ChatGPT=)
