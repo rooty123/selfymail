@@ -25,12 +25,12 @@ services:
       - SYS_MODULE
     restart: unless-stopped
     volumes:
-      - ~/selfymail/wg:/config
+      - ./wg:/config
     ports:
-      - "26:25"
-      - "144:143"
-      - "588:587"
-      - "994:993"
+      - "25:25"
+      - "143:143"
+      - "587:587"
+      - "993:993"
     
     
 
