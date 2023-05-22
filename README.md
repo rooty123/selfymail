@@ -36,7 +36,8 @@ run `./addmbox.sh some@mailbox.com`
 Since currently selfymail comes without webmail (but it is in TODO) you have to set up email client to use you new mailserver.
 Use localhost:993 for imap and localhost:587 for email smtp port. If client is remote you have to define valid IP address.
 
-If you use wireguard (default), then your mail server has IP  192.168.X.2 and you can use it in remote email clients in the same wireguard network.
+If you use wireguard (default), then your mail server has IP  192.168.X.2 and you can use it in remote email clients in the same wireguard network. 
+You can download wireguard config for up to 10 your secondary devices using telegram bot.
 
 
 [!["Buy Me A Coffee"](https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png)](https://www.buymeacoffee.com/rooty)
