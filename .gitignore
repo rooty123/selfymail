@@ -1,2 +1,4 @@
 .env
-wg/
+wg/wg0.conf
+wg/coredns
+wg/templates

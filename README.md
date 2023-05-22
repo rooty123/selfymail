@@ -1,6 +1,6 @@
 # Selfymail
 
-Launching self mail hosting has always been pain in the ass. Generaly you need VPS or similar to host and pay for it. Besides you need to set up and manage all antispam services to prevent you from being spammed. 
+Launching self mail hosting has always been a pain in the ass. Generally you need VPS or similar host and pay for it. Besides you need to set up and manage all antispam services to prevent you from being spammed. 
 
 The aim of Selfymail is to make running self hosted mail as easy as possible.
 
@@ -24,7 +24,7 @@ Under the hood selfymail uses great [Maddy mail server](https://maddy.email/) wh
 * Access telegram bot [@selfymailbot](https://t.me/selfymailbot) to get the WG config. You need to set correct MX record during this step
 * Wait to be approved (usually it takes up to several hours, but automation is in TODO)
 * Save `wg0.conf` to `wg/wg0.conf`
-* Run `./selfymail.sh` and and answer a few questions. Docker compose will be launched.
+* Run `./selfymail.sh` and answer a few questions. Docker compose will be launched.
 
 ### Usage
 
