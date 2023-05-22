@@ -24,7 +24,7 @@ Under the hood selfymail uses great [Maddy mail server](https://maddy.email/) wh
 * Access telegram bot [@selfymailbot](https://t.me/selfymailbot) to get the WG config. You need to set correct MX record during this step
 * Wait to be approved (usually it takes up to several hours, but automation is in TODO)
 * Save `wg0.conf` to `wg/wg0.conf`
-* Run `./selfymail.sh` and answer a few questions. Docker compose will be launched.
+* Run `./selfymail.sh` and answer a few questions. Docker compose will be launched. Self-singed certificates will be issued.
 
 ### Usage
 
@@ -35,6 +35,8 @@ run `./addmbox.sh some@mailbox.com`
 ##### Setup email client
 Since currently selfymail comes without webmail (but it is in TODO) you have to set up email client to use you new mailserver.
 Use localhost:993 for imap and localhost:587 for email smtp port. If client is remote you have to define valid IP address.
+
+Many email clients will warn you about untrusted certificates, this is normal and made for simplicity. You can issue Let's encrypt certs if you want.
 
 If you use wireguard (default), then your mail server has IP  192.168.X.2 and you can use it in remote email clients in the same wireguard network. 
 You can download wireguard config for up to 10 your secondary devices using telegram bot.
